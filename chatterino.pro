@@ -166,6 +166,7 @@ SOURCES += \
     src/widgets/dialogs/EmotePopup.cpp \
     src/widgets/dialogs/LastRunCrashDialog.cpp \
     src/widgets/dialogs/LoginDialog.cpp \
+    src/widgets/dialogs/LogsPopup.cpp \
     src/widgets/dialogs/NotificationPopup.cpp \
     src/widgets/dialogs/QualityPopup.cpp \
     src/widgets/dialogs/SelectChannelDialog.cpp \
@@ -228,7 +229,8 @@ SOURCES += \
     src/widgets/settingspages/FeelPage.cpp \
     src/util/InitUpdateButton.cpp \
     src/widgets/dialogs/UpdateDialog.cpp \
-    src/widgets/settingspages/IgnoresPage.cpp
+    src/widgets/settingspages/IgnoresPage.cpp \
+    src/widgets/dialogs/LogsPopup.cpp
 
 HEADERS  += \
     src/Application.hpp \
@@ -335,6 +337,7 @@ HEADERS  += \
     src/widgets/dialogs/EmotePopup.hpp \
     src/widgets/dialogs/LastRunCrashDialog.hpp \
     src/widgets/dialogs/LoginDialog.hpp \
+    src/widgets/dialogs/LogsPopup.hpp \
     src/widgets/dialogs/NotificationPopup.hpp \
     src/widgets/dialogs/QualityPopup.hpp \
     src/widgets/dialogs/SelectChannelDialog.hpp \
@@ -404,7 +407,8 @@ HEADERS  += \
     src/widgets/settingspages/FeelPage.hpp \
     src/util/InitUpdateButton.hpp \
     src/widgets/dialogs/UpdateDialog.hpp \
-    src/widgets/settingspages/IgnoresPage.hpp
+    src/widgets/settingspages/IgnoresPage.hpp \
+    src/widgets/dialogs/LogsPopup.hpp
 
 RESOURCES += \ 
     resources/resources.qrc \
