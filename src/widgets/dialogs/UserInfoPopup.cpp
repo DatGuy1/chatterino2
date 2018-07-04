@@ -70,7 +70,7 @@ UserInfoPopup::UserInfoPopup()
         user.emplace<QCheckBox>("Ignore").assign(&this->ui_.ignore);
         user.emplace<QCheckBox>("Ignore highlights").assign(&this->ui_.ignoreHighlights);
         auto viewLogs = user.emplace<RippleEffectLabel>(this).assign(&this->ui_.viewLogs);
-        this->ui_.viewLogs->getLabel().setText("View logs");
+        this->ui_.viewLogs->getLabel().setText("Logs");
 
         auto mod = user.emplace<RippleEffectButton>(this);
         mod->setPixmap(app->resources->buttons.mod);
@@ -82,8 +82,9 @@ UserInfoPopup::UserInfoPopup()
         user->addStretch(1);
 
         QObject::connect(viewLogs.getElement(), &RippleEffectLabel::clicked, [this] {
-            LogsPopup *logs = new LogsPopup();
+            auto logs = new LogsPopup();
             logs->setInfo(this->channel_, this->userName_);
+            logs->setAttribute(Qt::WA_DeleteOnClose);
             logs->show();
         });
 
